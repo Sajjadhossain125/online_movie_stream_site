@@ -1,0 +1,25 @@
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    background-color: #000000;
+    padding: 30px 20px;
+    color: white;
+    font-size: 2rem;
+    font-family: 'Arial', sans-serif;;
+
+}
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0 auto
+}
+.nav ul li {
+    cursor: pointer;
+}
+
+.nav ul li:hover {
+    color: #ff6347; /* Tomato color on hover */
+}

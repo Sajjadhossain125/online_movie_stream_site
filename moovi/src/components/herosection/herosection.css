@@ -1,0 +1,21 @@
+.Container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boxstyle{
+    width: 840px;
+    height: 400px;
+    border-radius: 5px ;
+    border-style:dotted
+}
+.bg-col{
+    background-color: bisque;
+}
+.flex{
+    display: flex;
+}
+.gap{
+    padding: 10px;
+    background-color: gray;
+}

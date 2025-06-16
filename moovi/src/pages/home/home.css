@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('./bg.jpg') no-repeat center center/cover;
+    backdrop-filter: blur(10px);
+  }
+  
+  .container {
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+  }
+  
+  .containerWrapping {
+    margin: 0 auto;
+
+    width: 800px;
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .glassEffect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  }
+  
+  .search_bar {
+    position: relative; /* Add this */
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    z-index: 10;
+  }
+  
+  .search_bar label {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+  
+  .search_bar input {
+    border-radius: 10px;
+    background-color: #e0e0e0;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    width: 100%;
+    outline: none;
+  }
+  
+  .section h2 {
+    color: white;
+    margin-bottom: 10px;
+    text-align: left;
+    width: 100%;
+  }
+  
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+  }
+  
+  .tags span {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    font-size: 0.95rem;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  
+  .tags span:hover {
+    background: rgba(255, 255, 255, 0.4);
+    color: black;
+  }
+  /* Dropdown Fix */
+.suggestion-dropdown {
+    position: absolute;
+    top: 100%; /* aligns directly below input */
+    left: 0;
+    right: 0;
+    background-color: rgba(20, 20, 20, 0.95);
+    border: 1px solid #333;
+    border-radius: 0 0 10px 10px;
+    margin-top: 5px;
+    padding: 0;
+    list-style: none;
+    z-index: 9999; /* Ensure it's above everything */
+    max-height: 200px;
+    overflow-y: auto;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  }
+  
+  .suggestion-dropdown li {
+    padding: 10px 15px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  .suggestion-dropdown li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
