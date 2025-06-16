@@ -11,12 +11,12 @@ export default function Home() {
   const [isSearchFocused, setIsSearchFocused] = useState(false);
 
   useEffect(() => {
-    fetch('http://localhost:3000/api/categories')
+    fetch('${process.env.REACT_APP_API_URL}/api/categories')
       .then(res => res.json())
       .then(data => setCategories(data))
       .catch(err => console.error('Error fetching categories:', err));
 
-    fetch('http://localhost:3000/api/movies')
+    fetch('${process.env.REACT_APP_API_URL}/api/movies')
       .then(res => res.json())
       .then(data => setMovies(data))
       .catch(err => console.error('Error fetching movies:', err));
