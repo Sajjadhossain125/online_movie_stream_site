@@ -13,12 +13,12 @@ export default function MovieDetails() {
     const fetchMovieAndRelated = async () => {
       try {
         // Fetch current movie details
-        const movieResponse = await fetch(`http://localhost:3000/api/movies/${id}`);
+        const movieResponse = await fetch(`${process.env.REACT_APP_API_URL}/api/movies/${id}`);
         const movieData = await movieResponse.json();
         setMovie(movieData);
 
         // Fetch all movies to find related ones
-        const allMoviesResponse = await fetch('http://localhost:3000/api/movies');
+        const allMoviesResponse = await fetch('${process.env.REACT_APP_API_URL}/api/movies');
         const allMoviesData = await allMoviesResponse.json();
 
         // Filter related movies based on same category, excluding current movie
