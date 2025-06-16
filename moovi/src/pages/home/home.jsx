@@ -11,12 +11,12 @@ export default function Home() {
   const [isSearchFocused, setIsSearchFocused] = useState(false);
 
   useEffect(() => {
-    fetch('${process.env.REACT_APP_API_URL}/api/categories')
+    fetch('https://online-movie-stream-site.onrender.com/api/categories')
       .then(res => res.json())
       .then(data => setCategories(data))
       .catch(err => console.error('Error fetching categories:', err));
 
-    fetch('${process.env.REACT_APP_API_URL}/api/movies')
+    fetch('https://online-movie-stream-site.onrender.com/api/movies')
       .then(res => res.json())
       .then(data => setMovies(data))
       .catch(err => console.error('Error fetching movies:', err));
