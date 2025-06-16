@@ -5,7 +5,7 @@ export default function MovieList() {
   const [groupedMovies, setGroupedMovies] = useState({});
 
   useEffect(() => {
-    fetch('${process.env.REACT_APP_API_URL}/api/movies')
+    fetch('https://online-movie-stream-site.onrender.com/api/movies')
       .then(res => res.json())
       .then(data => {
         const grouped = {};
