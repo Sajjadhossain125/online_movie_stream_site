@@ -13,12 +13,12 @@ export default function MovieDetails() {
     const fetchMovieAndRelated = async () => {
       try {
         // Fetch current movie details
-        const movieResponse = await fetch(`${process.env.REACT_APP_API_URL}/api/movies/${id}`);
+        const movieResponse = await fetch(`https://online-movie-stream-site.onrender.com/api/movies/${id}`);
         const movieData = await movieResponse.json();
         setMovie(movieData);
 
         // Fetch all movies to find related ones
-        const allMoviesResponse = await fetch('${process.env.REACT_APP_API_URL}/api/movies');
+        const allMoviesResponse = await fetch('https://online-movie-stream-site.onrender.com/api/movies');
         const allMoviesData = await allMoviesResponse.json();
 
         // Filter related movies based on same category, excluding current movie
