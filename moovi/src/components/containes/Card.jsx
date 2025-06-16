@@ -5,7 +5,7 @@ export default function MovieList() {
   const [groupedMovies, setGroupedMovies] = useState({});
 
   useEffect(() => {
-    fetch('http://localhost:3000/api/movies')
+    fetch('${process.env.REACT_APP_API_URL}/api/movies')
       .then(res => res.json())
       .then(data => {
         const grouped = {};
